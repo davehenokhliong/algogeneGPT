@@ -40,10 +40,10 @@ def retrieval_qa_chain(llm, prompt, db):
 def load_llm():
     # Load the locally downloaded model here
     llm = CTransformers(
-        model = "TheBloke/Llama-2-7B-Chat-GGML",
-        model_type="llama",
-        max_new_tokens = 512,
-        temperature = 0.5
+        model="mistral-7b-v0.1.Q4_K_M.gguf",
+        model_type="mistral",
+        max_new_tokens=1048, #how short or long the output
+        temperature=0.3 #moderate level of randomness
     )
     return llm
 
